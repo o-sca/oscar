@@ -1,0 +1,12 @@
+{
+  "plugins": ["simple-import-sort"],
+  "extends": [
+    "prettier",
+    "next/core-web-vitals",
+    "plugin:@next/next/recommended"
+  ],
+  "rules": {
+    "simple-import-sort/imports": "error",
+    "simple-import-sort/exports": "error"
+  }
+}
