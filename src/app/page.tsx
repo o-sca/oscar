@@ -25,7 +25,7 @@ export default function Page() {
             <CardTitle>Oscar Yang Guang Zhu</CardTitle>
             <Avatar>
               <AvatarImage src="https://github.com/o-sca.png" alt="@o-sca" />
-              <AvatarFallback>CN</AvatarFallback>
+              <AvatarFallback>OZ</AvatarFallback>
             </Avatar>
           </div>
           <CardDescription>
