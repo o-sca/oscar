@@ -6,6 +6,9 @@ import {
   PhoneIcon,
 } from 'lucide-react';
 
+import { EducationCard } from '@/components/edu-card';
+import { ProjectCard } from '@/components/project-card';
+import { SkillCardHeader } from '@/components/skill-card-header';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { Button } from '@/components/ui/button';
 import {
@@ -15,57 +18,91 @@ import {
   CardHeader,
   CardTitle,
 } from '@/components/ui/card';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import { WorkCard } from '@/components/work-card';
+import { data } from '@/data';
 
 export default function Page() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <Card className="w-[350px]">
-        <CardHeader>
-          <div className="flex flex-direction-row justify-between">
-            <CardTitle>Oscar Yang Guang Zhu</CardTitle>
-            <Avatar>
-              <AvatarImage src="https://github.com/o-sca.png" alt="@o-sca" />
-              <AvatarFallback>OZ</AvatarFallback>
-            </Avatar>
-          </div>
-          <CardDescription>
-            Full Stack Engineer focused on building products with extra
-            attention to detail
-          </CardDescription>
-          <p className="max-w-md items-center text-pretty text-xs text-muted-foreground">
-            <a
-              className="inline-flex gap-x-1.5 align-baseline leading-none hover:underline"
-              href="https://www.google.com/maps/place/Vancouver,+BC/@49.2577354,-123.123904,12z/data=!3m1!4b1!4m6!3m5!1s0x548673f143a94fb3:0xbb9196ea9b81f38b!8m2!3d49.2827291!4d-123.1207375!16zL20vMDgwaDI?entry=ttu"
-              target="_blank"
-            >
-              <GlobeIcon className="h-3 w-3" />
-              Vancouver, Canada, PST
-            </a>
-          </p>
-        </CardHeader>
-        <CardContent>
-          <Button className="h-8 w-8" variant="outline" size="icon" asChild>
-            <a href="mailto:oscar@chome.xyz">
-              <MailIcon className="h-4 w-4" />
-            </a>
-          </Button>
-          <Button className="h-8 w-8" variant="outline" size="icon" asChild>
-            <a href="tel:+17789380721">
-              <PhoneIcon className="h-4 w-4" />
-            </a>
-          </Button>
-          <Button className="h-8 w-8" variant="outline" size="icon" asChild>
-            <a href="https://github.com/o-sca">
-              <GithubIcon className="h-4 w-4" />
-            </a>
-          </Button>
-          <Button className="h-8 w-8" variant="outline" size="icon" asChild>
-            <a href="https://linkedin.com/in/oscar-zhu">
-              <LinkedinIcon className="h-4 w-4" />
-            </a>
-          </Button>
-        </CardContent>
-      </Card>
+    <main className="flex min-h-screen flex-col items-center flex-start p-24">
+      <Tabs defaultValue="projects" className="w-[450px]">
+        <TabsList className="grid w-full grid-cols-5">
+          <TabsTrigger value="personal">Personal</TabsTrigger>
+          <TabsTrigger value="education">Education</TabsTrigger>
+          <TabsTrigger value="skills">Skills</TabsTrigger>
+          <TabsTrigger value="experience">Experience</TabsTrigger>
+          <TabsTrigger value="projects">Projects</TabsTrigger>
+        </TabsList>
+        <TabsContent value="personal">
+          <Card>
+            <CardHeader>
+              <div className="flex flex-direction-row justify-between">
+                <CardTitle>{data.name}</CardTitle>
+                <Avatar>
+                  <AvatarImage src={data.image} alt="@o-sca" />
+                  <AvatarFallback>{data.initial}</AvatarFallback>
+                </Avatar>
+              </div>
+              <CardDescription>{data.summary}</CardDescription>
+              <p className="max-w-md items-center text-pretty text-xs text-muted-foreground">
+                <a
+                  className="inline-flex gap-x-1.5 align-baseline leading-none"
+                  href={data.location.googlemaps}
+                  target="_blank"
+                >
+                  <GlobeIcon className="h-3 w-3" />
+                  {data.location.city}, {data.location.country},{' '}
+                  {data.location.timezone}
+                </a>
+              </p>
+            </CardHeader>
+            <CardContent>
+              <Button className="h-8 w-8" variant="outline" size="icon" asChild>
+                <a href={data.email}>
+                  <MailIcon className="h-4 w-4" />
+                </a>
+              </Button>
+              <Button className="h-8 w-8" variant="outline" size="icon" asChild>
+                <a href={data.tel}>
+                  <PhoneIcon className="h-4 w-4" />
+                </a>
+              </Button>
+              <Button className="h-8 w-8" variant="outline" size="icon" asChild>
+                <a href={data.profiles.github}>
+                  <GithubIcon className="h-4 w-4" />
+                </a>
+              </Button>
+              <Button className="h-8 w-8" variant="outline" size="icon" asChild>
+                <a href={data.profiles.linkedin}>
+                  <LinkedinIcon className="h-4 w-4" />
+                </a>
+              </Button>
+            </CardContent>
+          </Card>
+        </TabsContent>
+        <TabsContent value="education">
+          <EducationCard data={data.education} />
+        </TabsContent>
+        <TabsContent value="skills">
+          <Card>
+            <div className="flex flex-col">
+              <SkillCardHeader name="Languages" data={data.skills.languages} />
+              <SkillCardHeader
+                name="Frameworks"
+                data={data.skills.frameworks}
+              />
+              <SkillCardHeader name="Databases" data={data.skills.databases} />
+              <SkillCardHeader name="Tools" data={data.skills.tools} />
+            </div>
+          </Card>
+        </TabsContent>
+        <TabsContent value="experience">
+          <WorkCard data={data.work} />
+        </TabsContent>
+        <TabsContent value="projects">
+          <ProjectCard data={data.projects} />
+        </TabsContent>
+      </Tabs>
     </main>
   );
 }
