@@ -25,7 +25,7 @@ import { data } from '@/data';
 export default function Page() {
   return (
     <main className="flex min-h-screen flex-col items-center flex-start p-24">
-      <Tabs defaultValue="projects" className="w-[450px]">
+      <Tabs defaultValue="personal" className="w-[450px]">
         <TabsList className="grid w-full grid-cols-5">
           <TabsTrigger value="personal">Personal</TabsTrigger>
           <TabsTrigger value="education">Education</TabsTrigger>
