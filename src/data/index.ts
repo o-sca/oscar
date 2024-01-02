@@ -108,7 +108,7 @@ export const data = {
     },
     {
       name: 'APM',
-      description: 'Automated sports activity registration tool',
+      description: 'Automated sports activity registration software',
       url: 'https://apm.chome.xyz',
       github: '',
       startDate: 'Sept. 2023',
@@ -131,7 +131,7 @@ export const data = {
       name: 'Lieu',
       description:
         'A web application for users to summarise or expand on their text inputs using AI',
-      url: 'https://lieu.chome.xyz',
+      url: '',
       github: 'https://github.com/o-sca/lieu',
       startDate: 'Nov. 2023',
       endDate: 'Dec. 2023',
