@@ -152,7 +152,7 @@ export const data = {
     {
       name: 'Glitchpop',
       description: 'An NFT collection on the Ethereum blockchain',
-      url: '',
+      url: 'https://opensea.io/collection/project-glitchpop',
       github: 'https://github.com/o-sca/glitchpop-mern-dapp',
       startDate: 'May. 2022',
       endDate: 'Jun. 2022',
