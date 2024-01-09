@@ -4,7 +4,7 @@ export const data = {
   label: 'Software Engineer',
   image: 'https://github.com/o-sca.png',
   summary:
-    'Software Engineer with experience in building web, desktop, and blockchain applications.',
+    'Fullstack Developer with experience in building web, desktop, and blockchain applications.',
   email: 'mailto:oscar@chome.xyz',
   tel: 'tel:+17789380721',
   location: {
