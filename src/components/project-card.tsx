@@ -21,7 +21,7 @@ export function ProjectCard({
 }) {
   return (
     <Card>
-      <ScrollArea className="h-80">
+      <ScrollArea className="h-[800px]">
         {data.map((project) => {
           return (
             <CardHeader key={project.name}>

@@ -24,14 +24,14 @@ import { data } from '@/data';
 
 export default function Page() {
   return (
-    <main className="flex min-h-screen flex-col items-center flex-start p-24">
-      <Tabs defaultValue="personal" className="w-[450px]">
+    <main className="flex flex-col items-center flex-start p-10">
+      <Tabs defaultValue="personal" className="w-full">
         <TabsList className="grid w-full grid-cols-5">
           <TabsTrigger value="personal">Personal</TabsTrigger>
-          <TabsTrigger value="education">Education</TabsTrigger>
-          <TabsTrigger value="skills">Skills</TabsTrigger>
-          <TabsTrigger value="experience">Experience</TabsTrigger>
           <TabsTrigger value="projects">Projects</TabsTrigger>
+          <TabsTrigger value="experience">Experience</TabsTrigger>
+          <TabsTrigger value="skills">Skills</TabsTrigger>
+          <TabsTrigger value="education">Education</TabsTrigger>
         </TabsList>
         <TabsContent value="personal">
           <Card>
