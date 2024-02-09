@@ -28,17 +28,8 @@ export const data = {
     },
   ],
   skills: {
-    languages: [
-      'Typescript / Javascript',
-      'Python',
-      'Java',
-      'Kotlin',
-      'C',
-      'Solidity',
-      'Lua',
-      'C#',
-    ],
-    frameworks: ['NestJS', 'Angular', 'NextJS', 'Ethers.js', 'Web3.js'],
+    languages: ['Typescript / Javascript', 'Go', 'Python', 'Java', 'Solidity'],
+    frameworks: ['Nest', 'Angular', 'Next', 'Fiber', 'gRPC', 'pyTorch'],
     databases: ['MySQL', 'PostgreSQL', 'MS SQL', 'MongoDB', 'Firebase'],
     tools: [
       'Vim',
@@ -49,7 +40,6 @@ export const data = {
       'Docker',
       'Azure',
       'Husky',
-      'Jest',
       'Jira',
     ],
   },
@@ -57,7 +47,7 @@ export const data = {
     {
       company: 'Adminwise',
       location: 'Calgary, AB',
-      position: 'Backend Developer (Contract Work)',
+      position: 'Backend Developer',
       summary:
         'Built the multimedia and file storage services for the platform',
       url: '',
@@ -68,7 +58,7 @@ export const data = {
     {
       company: 'ElektraFi',
       location: 'Vancouver, BC',
-      position: 'Backend Developer (Contract Work)',
+      position: 'Backend Developer',
       summary: 'Created a proof of concept mobile application',
       url: 'https://elektrafi.io/',
       startDate: 'Apr. 2023',
@@ -93,7 +83,7 @@ export const data = {
       startDate: 'May. 2023',
       endDate: 'Present',
       labels: ['Side Project'],
-      skills: ['Typescript', 'Solidity', 'NestJS', 'ReactJS', 'Redux'],
+      skills: ['Typescript', 'Solidity', 'NestJS', 'ReactJS', 'Redux', 'MySQL'],
     },
     {
       name: 'Chome',
@@ -113,13 +103,13 @@ export const data = {
       startDate: 'Sept. 2023',
       endDate: 'Present',
       labels: ['Side Project'],
-      skills: ['Typescript'],
+      skills: ['Typescript', 'Go', 'Python', 'Docker', 'gRPC', 'PostgreSQL'],
     },
     {
       name: 'Scheduler',
       description:
         'A scheduling web app where users can add friends and create events with them',
-      url: 'https://scheduler.chome.xyz',
+      url: '',
       github: 'https://github.com/o-sca/scheduler',
       startDate: 'Nov. 2023',
       endDate: 'Dec. 2023',
