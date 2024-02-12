@@ -72,6 +72,16 @@ export const data = {
         'Jest',
       ],
     },
+    {
+      company: 'Kitsilano Barbers',
+      location: 'Vancouver, BC',
+      position: 'Frontend Developer',
+      summary: 'Designed and built the company website',
+      url: 'https://kitsilanobarbers.com/',
+      startDate: 'Jan. 2021',
+      endDate: 'Jun. 2021',
+      labels: ['Typescript', 'React'],
+    },
   ],
   projects: [
     {
