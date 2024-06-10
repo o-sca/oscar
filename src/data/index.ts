@@ -87,13 +87,21 @@ export const data = {
     {
       name: 'Copium',
       description:
-        'NFT tracking and alerts software as a service tool for traders',
+        'Multichain wallet tracking and alerts software as a service tool for traders',
       url: 'https://copium.sh',
       github: '',
       startDate: 'May. 2023',
       endDate: 'Present',
       labels: ['Side Project'],
-      skills: ['Typescript', 'Solidity', 'NestJS', 'ReactJS', 'Redux', 'MySQL'],
+      skills: [
+        'Golang',
+        'Typescript',
+        'Solidity',
+        'NestJS',
+        'ReactJS',
+        'Redux',
+        'MySQL',
+      ],
     },
     {
       name: 'Chome',
