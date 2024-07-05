@@ -30,7 +30,14 @@ export const data = {
   skills: {
     languages: ['Typescript / Javascript', 'Go', 'Python', 'Java', 'Solidity'],
     frameworks: ['Nest', 'Angular', 'Next', 'Fiber', 'gRPC', 'pyTorch'],
-    databases: ['MySQL', 'PostgreSQL', 'MS SQL', 'MongoDB', 'Firebase'],
+    databases: [
+      'MySQL',
+      'PostgreSQL',
+      'MS SQL',
+      'Redis',
+      'MongoDB',
+      'Firebase',
+    ],
     tools: [
       'Vim',
       'Postman',
@@ -97,10 +104,9 @@ export const data = {
         'Golang',
         'Typescript',
         'Solidity',
-        'NestJS',
-        'ReactJS',
-        'Redux',
-        'MySQL',
+        'NextJS',
+        'Redis',
+        'PostgreSQL',
       ],
     },
     {
